@@ -1,16 +1,19 @@
 [project]
-name = "prototype"
-version = "0.1.0"
+dependencies = [
+  "alembic>=1.18.4",
+  "fastapi[standard]>=0.135.0",
+  "sqlalchemy>=2.0.47",
+]
 description = "Add your description here"
+name = "prototype"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "alembic>=1.18.4",
-    "fastapi[standard]>=0.135.0",
-    "sqlalchemy>=2.0.47",
-]
+version = "0.1.0"
 
 [dependency-groups]
 dev = [
-    "ruff>=0.15.4",
+  "ruff>=0.15.4",
 ]
+
+[tool.ruff]
+select = ["I"]
