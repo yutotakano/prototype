@@ -1,3 +1,4 @@
 [tools]
+prek = "latest"
 uv = "0.10.7"
 yarn = "1.22.22"

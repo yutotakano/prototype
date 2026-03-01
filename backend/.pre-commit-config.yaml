@@ -1,0 +1,13 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: Ruff Check
+        language: system
+        entry: uv run ruff check --fix .
+        files: "\\.py$"
+      - id: ruff-format
+        name: Ruff Format
+        language: system
+        entry: uv run ruff format .
+        files: "\\.py$"
