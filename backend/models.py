@@ -156,3 +156,37 @@ class CourseRelation(Base):
     from_course: Course
     to_course: Course
     relation_type: CourseRelationType
+
+
+class DegreeDeliveryType(enum.Enum):
+    FULL_TIME = "FULL_TIME"
+    PART_TIME = "PART_TIME"
+    PART_TIME_INTERMITTENT = "PART_TIME_INTERMITTENT"
+
+
+class DegreeLevelType(enum.Enum):
+    UNDERGRADUATE = "UNDERGRADUATE"
+    POSTGRADUATE = "POSTGRADUATE"
+    DOCTORATE = "DOCTORATE"
+
+
+class Degree(Base):
+    __tablename__ = "degree"
+
+    ext_id: str
+    name: str
+    college: College
+    school: School
+    honours: bool
+    title: str  # MSc, BEng, MA, PhD with Integrated Study, etc
+    code: str  # same as ext_id?
+    level: DegreeLevelType
+    delivery_type: DegreeDeliveryType
+    duration_year_options: list[int]
+
+
+class DegreeInstance(Base):
+    __tablename__ = "degree_instance"
+
+    degree: Degree
+    academic_year_starting: int
