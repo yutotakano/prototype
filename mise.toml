@@ -1,4 +1,4 @@
 [tools]
 prek = "latest"
-uv = "0.10.7"
+uv = "0.11.26"
 yarn = "1.22.22"

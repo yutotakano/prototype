@@ -4,3 +4,8 @@ __pycache__
 .ruff_cache
 .mypy_cache
 .vscode
+collector/.scrapy
+collector/23-24
+collector/24-25
+collector/25-26
+collector/26-27
