@@ -12,3 +12,5 @@ DOWNLOAD_DELAY = 10
 BOT_NAME = "collector"
 SPIDER_MODULES = ["collector.spiders"]
 NEWSPIDER_MODULE = "collector.spiders"
+
+JOBDIR = "spider_jobs"
