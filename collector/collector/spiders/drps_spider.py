@@ -16,6 +16,7 @@ class DRPSSpider(scrapy.Spider):
     def parse(self, response: Response):
         # Save the response body to a file based on URL (removing .php)
         url_path = Path(response.url.split("ac.uk/")[-1].replace(".php", ""))
+        url_path = Path("data") / url_path  # Prepend "data" to the path
 
         # Create the directory if it doesn't exist
         url_path.parent.mkdir(parents=True, exist_ok=True)
